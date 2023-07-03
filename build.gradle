@@ -23,6 +23,12 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven { url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2' }
     }
+    configurations.all{
+        resolutionStrategy {
+            force 'org.xerial:sqlite-jdbc:3.34.0'
+        }
+    }
+    
 }
 
 task clean(type: Delete) {
